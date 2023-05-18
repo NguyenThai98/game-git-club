@@ -8,7 +8,9 @@ const route = require('./routers');
 
 // routers
 route(app);
-
+app.get("/", (req, res) => {
+  res.json({});
+})
 app.listen(PORT, () => {
     console.log(`start sever at port http://localhost:${PORT}`);
 })
