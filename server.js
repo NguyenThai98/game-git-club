@@ -3,13 +3,16 @@ const app = express();
 const PORT = 3000;
 const db = require('./config/db.config');
 const route = require('./routers');
+
+const data = require('./config/json.data');
+
 // db connect
 //db.connect();
 
 // routers
 route(app);
 app.get("/", (req, res) => {
-  res.json({});
+  res.json(data.dataPaymentMainte)
 })
 app.post("/payment/mainte", (req, res) => {
   res.json(data.dataPaymentMainte)
